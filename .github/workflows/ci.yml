@@ -1,24 +1,27 @@
-name: ci 
+name: Node.js CI
+
 on:
-  push:
-    branches:
-      - master 
-      - main
-      - "Simple-framework-v2"
-permissions:
-  contents: write
+    workflow_dispatch:
+    push:
+        branches: [$default-branch]
+    pull_request:
+        branches: [$default-branch]
+
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
-        with:
-          python-version: 3.x
-      - uses: actions/cache@v2
-        with:
-          key: ${{ github.ref }}
-          path: .cache
-      - run: pip install mkdocs-material
-      - run: pip install pillow cairosvg
-      - run: mkdocs gh-deploy --force
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v7
+            - name: Use Node.js 26
+              uses: actions/setup-node@v7
+              with:
+                  node-version: 26.x
+                  cache: "pnpm"
+            - name: Install packages
+              run: pnpm ci
+            - name: Lint code
+              run: pnpm lint
+              continue-on-error: true
+            - name: Build project
+              run: pnpm run build

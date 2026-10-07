@@ -1,10 +1,9 @@
 text {
-    stroke: none;
-    fill: #d4af37;
-    font-weight:normal;
-    
+	stroke: none;
+	fill: #d4af37;
+	font-weight: normal;
 }
 
 .recharts-rectangle:hover {
-    fill: #224a20;
+	fill: #224a20;
 }

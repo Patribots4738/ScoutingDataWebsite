@@ -1,0 +1,63 @@
+import { useState } from "preact/hooks";
+
+import "./Settings.css";
+
+export default function Settings() {
+	const [showSettings, setShowSettings] = useState(false);
+
+	let settingsList = ["eventCode", "minQual", "maxQual", "shouldIncludeDead", "average"];
+
+	function settingsListUI() {
+		let list = [];
+		for (let i = 0; i < settingsList.length; i++) {
+			let setting = settingsList[i];
+			list.push(
+				<div className="setting-card" key={i}>
+					<div className="setting-name">
+						<div className="settings-text">{setting}:</div>
+					</div>
+					<div className="setting-current">
+						<div className="settings-text">
+							{localStorage.getItem(setting) === null
+								? "Unset"
+								: localStorage.getItem(setting)}
+						</div>
+					</div>
+					<div className="change-button" onClick={() => handleSettingEdit(setting)}>
+						<div className="settings-text">Edit</div>
+					</div>
+				</div>,
+			);
+		}
+		return list;
+	}
+
+	function handleSettingEdit(setting: string) {
+		let newValue = prompt(`Type new ${setting}:`);
+		if (newValue !== null) {
+			localStorage.setItem(setting, newValue);
+			window.location.reload();
+		}
+	}
+
+	function settingsWindow() {
+		return <div className="settings-window">{settingsListUI()}</div>;
+	}
+
+	function display() {
+		return showSettings ? settingsWindow() : null;
+	}
+
+	function handleToggle() {
+		setShowSettings(!showSettings);
+	}
+
+	return (
+		<div>
+			<div className="settings-button" onClick={() => handleToggle()}>
+				<div className="settings-button-text">Settings</div>
+			</div>
+			{display()}
+		</div>
+	);
+}

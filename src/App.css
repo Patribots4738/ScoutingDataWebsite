@@ -13,229 +13,217 @@ Type Scale - 1.333 Perfect Fourth
 */
 
 :root {
-    --text-color: #E0E0E0; /* softer color for text */
-    --background-color: #282828; /* softer color for background */
-    --lighter-background-color: #383838; /* slightly lighter color for hover effects */
-    --primary-color: #BB86FC; /* primary color */
-    --secondary-color: #3700B3; /* secondary color */
-    --accent-color: #03DAC6; /* accent color */
+	--text-color: #e0e0e0; /* softer color for text */
+	--background-color: #282828; /* softer color for background */
+	--lighter-background-color: #383838; /* slightly lighter color for hover effects */
+	--primary-color: #bb86fc; /* primary color */
+	--secondary-color: #3700b3; /* secondary color */
+	--accent-color: #03dac6; /* accent color */
 }
 
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    margin-top: 50px;
-    margin-left: 0;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	background-color: var(--background-color);
+	color: var(--text-color);
+	margin-top: 50px;
+	margin-left: 0;
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+	width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #282828;
+	background: #282828;
 }
-  
+
 ::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 10px;
+	background: #888;
+	border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+	background: #555;
 }
 
 .outer-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid var(--text-color);
-    border-radius: 10px;
-    padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid var(--text-color);
+	border-radius: 10px;
+	padding: 1rem;
 }
 
 .widget {
-    display: flex;
-    justify-items: center;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-top: 1px solid var(--text-color);
-    border-bottom: 1px solid var(--text-color);
-    padding: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    width: 50%;
-    transition: width 0.25s, background-color 0.25s ease, border-radius 0.25s ease;
-    text-align: center;
+	display: flex;
+	justify-items: center;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-top: 1px solid var(--text-color);
+	border-bottom: 1px solid var(--text-color);
+	padding: 1rem 2rem;
+	width: 50%;
+	transition:
+		width 0.25s,
+		background-color 0.25s ease,
+		border-radius 0.25s ease;
+	text-align: center;
 }
 
 .widget:hover {
-    width: 60%;
-    background-color: var(--lighter-background-color);
-    border-radius: 10px;
+	width: 60%;
+	background-color: var(--lighter-background-color);
+	border-radius: 10px;
 }
 
 .widget:not(:hover) {
-    border-radius: 0;
+	border-radius: 0;
 }
 
 h1 {
-    font: 'VazirMatn', sans-serif;
-    font-size: 3rem;
-    color: var(--primary-color);
-    border: none !important;
-    width: 100% !important;
+	font-family: "VazirMatn", sans-serif;
+	font-size: 3rem;
+	color: var(--primary-color);
+	border: none !important;
+	width: 100% !important;
 }
 
 h3 {
-    font: 'VazirMatn', sans-serif;
-    font-size: 1.999rem;
-    font-weight: bold;
-    border: none !important;
+	font-family: "VazirMatn", sans-serif;
+	font-size: 1.999rem;
+	font-weight: bold;
+	border: none !important;
 }
 
 .textbox {
-    width: 12rem;
-    padding: 0.5rem;
-    margin: 0.5rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    font: 'VazirMatn', sans-serif;
-    text-align: center;
+	width: 12rem;
+	padding: 0.5rem;
+	margin: 0.5rem;
+	font-size: 1rem;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	font-family: "VazirMatn", sans-serif;
+	text-align: center;
 }
 
 .subtitle {
-    font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.333rem;
-    font-weight: normal;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	font-size: 1.333rem;
+	font-weight: normal;
 }
 
 .counter-value {
-    font: 'VazirMatn', sans-serif;
-    font-size: 2rem;
-    font-weight: normal;
+	font-family: "VazirMatn", sans-serif;
+	font-size: 2rem;
+	font-weight: normal;
 }
 
 .checkbox {
-    width: 2.1rem;
-    height: 2.1rem;
-    background-color: white;
-    border-radius: 50%;
-    vertical-align: middle;
-    border: 1px solid #ddd;
-    appearance: none;
-    -webkit-appearance: none;
-    outline: none;
-    cursor: pointer;
+	width: 2.1rem;
+	height: 2.1rem;
+	background-color: white;
+	border-radius: 50%;
+	vertical-align: middle;
+	border: 1px solid #ddd;
+	appearance: none;
+	-webkit-appearance: none;
+	outline: none;
+	cursor: pointer;
 }
 
-
-
 .checkbox:checked {
-    background-color: var(--primary-color);
+	background-color: var(--primary-color);
 }
 
 .checkbox:active {
-    transform: translateY(2px);
-    background-color: var(--accent-color)
+	transform: translateY(2px);
+	background-color: var(--accent-color);
 }
 
 .dropdown {
-    width: 13rem;
-    height: 2rem;
-    background-color: white;
-    border-radius: 5px;
-    vertical-align: middle;
-    border: 1px solid #ddd;
-    font: normal normal normal 17px/1 FontAwesome;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    font-size: 1rem;
-    font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	width: 13rem;
+	height: 2rem;
+	background-color: white;
+	border-radius: 5px;
+	vertical-align: middle;
+	border: 1px solid #ddd;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	font-size: 1rem;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .button {
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    border: 1px solid var(--text-color);
-    border-radius: 5px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin: 0.5rem;
-    font-size: 2rem;
-    cursor: pointer;
-    max-width: 13rem;
+	background-color: var(--primary-color);
+	color: var(--background-color);
+	border: 1px solid var(--text-color);
+	border-radius: 5px;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin: 0.5rem;
+	font-size: 2rem;
+	cursor: pointer;
+	max-width: 13rem;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .btn {
-    width: 3rem;
-}
-
-.button {
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    border: 1px solid var(--text-color);
-    border-radius: 5px;
-    margin: 0.5rem;
-    font-size: 2rem;
-    cursor: pointer;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	width: 3rem;
 }
 
 .button:hover {
-    transition-property: background-color, color;
-    transition-duration: 0.25s;
-    background-color: var(--background-color);
-    color: var(--secondary-color);
+	transition-property: background-color, color;
+	transition-duration: 0.25s;
+	background-color: var(--background-color);
+	color: var(--secondary-color);
 }
 
 .button:not(:hover) {
-    transition-property: background-color, color;
-    transition-duration: 0.25s;
+	transition-property: background-color, color;
+	transition-duration: 0.25s;
 }
 
 .button:active {
-    transition-property: background-color, color;
-    transition-duration: 0.1s;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
+	transition-property: background-color, color;
+	transition-duration: 0.1s;
+	background-color: var(--secondary-color);
+	color: var(--text-color);
 }
 
 .App-header {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    height: 50px;
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    z-index: 2000000
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	height: 50px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 2000000;
 }
 
 .navbar-but {
-    display: flex;
-    align-items: center;
-    background-color: var(--background-color);
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    transition: background-color, .5s;
+	display: flex;
+	align-items: center;
+	background-color: var(--background-color);
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	transition: background-color 0.5s;
 }
 
 .navbar-but:hover {
-    background-color: var(--lighter-background-color);
+	background-color: var(--lighter-background-color);
 }
 
 .nav-text {
-    width: 50%;
-    margin: 0 auto;
-    text-align: center;
-    color: var(--text-color);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+	color: var(--text-color);
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .data-point {
-    margin-bottom: 5px;
+	margin-bottom: 5px;
 }

@@ -1,49 +1,42 @@
 {
-  "name": "scouting-website",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@tanstack/react-query": "^5.17.19",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "ag-grid-react": "^31.0.1",
-    "apexcharts": "^3.45.2",
-    "firebase": "^10.7.1",
-    "firebase-admin": "^12.0.0",
-    "fs": "^0.0.1-security",
-    "query": "github:tanstack/react-query",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-google-charts": "^4.0.1",
-    "react-router-dom": "^6.21.1",
-    "react-scripts": "5.0.1",
-    "react-select": "^5.8.0",
-    "recharts": "^2.10.4",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "CI=false react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+	"name": "scouting-website",
+	"version": "0.2.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "vite build",
+		"dev": "vite dev",
+		"lint": "oxfmt --check && oxlint",
+		"lint:fix": "oxfmt --write && oxlint --fix",
+		"start": "vite start"
+	},
+	"dependencies": {
+		"@preact/preset-vite": "^2.10.6",
+		"@tanstack/react-query": "~5.104.1",
+		"firebase": "~12.19.0",
+		"preact": "^11.0.0",
+		"react-select": "~5.10.2",
+		"recharts": "~3.10.1",
+		"typescript": "~7.0.2",
+		"vite": "~8.3.2",
+		"wouter": "^3.13.0"
+	},
+	"devDependencies": {
+		"@eslint/js": "^10.0.1",
+		"oxfmt": "^0.71.0",
+		"oxlint": "^1.86.0"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"packageManager": "pnpm@12.9.1"
 }
